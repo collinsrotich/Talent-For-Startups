@@ -1,0 +1,55 @@
+p{
+    color: rgb(12, 12, 12);
+    width: 900px;
+    border: 1px, solid, rgb(12, 12, 12);
+}
+body {
+
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+html {
+
+    background-color: #a5a09f;
+    font-size: 13px;   
+    font-family: "Open Sans", sans-serif; 
+
+}
+h1{
+    font-size: 40;
+    font-family:'Times New Roman',Times,serif;
+    text-align: center;
+}
+h2{
+    font-size: 30;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h3{
+    font-size: 20px; 
+    text-align: center;
+}
+a:link, a:visited {
+    background-color: #1979e7c2;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+      background-color: rgb(9, 91, 105);
+  }
+
+  #kickstart{
+    font-size: 45px;
+    color: darkslateblue;
+    text-align: center;
+  }
+
+  .headings{
+    color: rgb(36, 14, 230);
+  }
+  
