@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Talent for Startups Project
+This is a one-stop destination for startups to acquire essential digital skills and business management knowledge. Whether you're just launching your venture or seeking to scale it up, we have the resources you need to succeed in today's competitive landscape.
+
+This project was developed using React and Firebase
+
+#Screenshors of the application
+### Home page
+
+### About Talent for Startups
+![Talent for startups About page](https://github.com/collinsrotich/Talent-For-Startups/assets/133889289/2e9f62e4-751e-460c-8463-1df4abcc92b4)
+
+### Courses page
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
