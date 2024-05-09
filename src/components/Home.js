@@ -1,34 +1,114 @@
 import React from "react";
-import home from './images/shane-rounce-1ZZ96uESRJQ-unsplash.jpg';
-import workspace from './images/pavel-neznanov-w95Fb7EEcjE-unsplash.jpg';
-import careers from './images/niclas-illg-wzVQp_NRIHg-unsplash.jpg';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import workspace from './images/T4SU workspace.jpg'; // Import the workspace image
 
 function Home() {
-    return (
-        <div>
-            <h1 className="headings">Welcome to Talent for startups</h1>
-            <p>Talent For Startups aims to bridge the educational gap by offering affordable courses tailored for aspiring entrepreneurs and professionals across Africa. By providing access to high-quality tech courses at lower costs, we empower individuals with the skills needed to thrive in today's digital economy, fostering innovation and economic growth within communities. Through technology education, we envision a society where talent is not limited by financial constraints, unlocking opportunities for individuals and driving positive societal change.</p>
-            <p id="kickstart">Kickstart your journey with us!</p>
-            <img src={home} alt="The workspace image" width="800" height="400" />
-            <h2 className="headings">Digital marketing Course</h2>
-            <p>This course covers essential digital marketing concepts such as SEO, social media marketing, email marketing, PPC advertising, and content marketing. Students will learn how to create effective digital marketing strategies to increase brand awareness, generate leads, and drive conversions. Through practical exercises and case studies, participants will gain hands-on experience in implementing various digital marketing tactics. The course also emphasizes tracking and analyzing key performance indicators (KPIs) to measure campaign success and optimize marketing efforts. Upon completion, students will have the skills and knowledge needed to thrive in the dynamic field of digital marketing.</p>
-            <img src={workspace} alt="The workspace image" width="800" height="400" />
-
-            <h3 className="headings">Software development Course</h3>
-            <p>This course provides a comprehensive overview of software development methodologies, programming languages, and software engineering principles. Students will learn how to design, develop, test, and deploy software applications using industry-standard tools and frameworks. The curriculum covers topics such as web development, mobile app development, database management, and version control systems. Through hands-on projects and coding exercises, participants will hone their problem-solving skills and build a portfolio of projects to showcase their expertise. Upon completion, students will be prepared for careers as software developers, engineers, or technical consultants in the rapidly evolving tech industry.</p>
-            <img src={careers} alt="Software Engineering" width="800" height="400" />
-
-            <h3 className="headings">Data Analytics Course</h3>
-            <p>The data analytics course focuses on teaching students how to collect, clean, analyze, and interpret data to derive valuable insights and make informed business decisions. Participants will learn essential data analysis techniques using tools such as Excel, Python, SQL, and data visualization libraries. Through real-world datasets and projects, students will develop proficiency in data manipulation, statistical analysis, and predictive modeling. The course also covers data storytelling and communication skills to effectively convey findings to stakeholders. Graduates will be equipped with the analytical skills sought after in various industries, including marketing, finance, and healthcare.</p>
-
-            <h3 className="headings">Cloud Computing Course</h3>
-            <p>This course introduces students to the fundamentals of cloud computing, including cloud architecture, deployment models, and service models. Participants will learn how to leverage cloud computing platforms such as AWS, Azure, and Google Cloud to provision resources, deploy applications, and manage infrastructure efficiently. The curriculum covers topics such as virtualization, containerization, serverless computing, and cloud security best practices. Through hands-on labs and projects, students will gain practical experience in building and managing cloud-based solutions. Upon completion, graduates will be equipped with the skills needed to pursue careers as cloud architects, DevOps engineers, or cloud infrastructure specialists.</p>
-
-            <h3 className="headings">Business Management Course</h3>
-            <p>The business management course provides students with a comprehensive understanding of key business concepts, principles, and practices. Participants will learn essential skills in areas such as strategic planning, organizational behavior, leadership, finance, and marketing. The curriculum covers case studies and real-world examples to illustrate management theories and principles in action. Students will develop critical thinking, decision-making, and problem-solving skills necessary to succeed in leadership roles. Upon completion, graduates will be prepared to pursue careers in various sectors, including entrepreneurship, consulting, project management, and corporate leadership.</p>
-            <p style={{ fontSize: "10px", color: "grey" }}>This content is AI generated</p>
-        </div>
-    );
+  return (
+    <Box>
+      <Paper
+        sx={{
+          position: 'relative',
+          backgroundColor: 'grey.800',
+          color: '#fff',
+          mb: 12,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundImage: `url(${workspace})`, // Use the workspace image as the background
+        }}
+      >
+        {/* Increase the priority of the hero background image */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            right: 0,
+            left: 0,
+            backgroundColor: 'rgba(0,0,0,.3)',
+          }}
+        />
+        <Grid container>
+          <Grid item md={12}>
+            <Box
+              sx={{
+                position: 'relative',
+                p: { xs: 3, md: 12 },
+                pr: { md: 0 },
+                textAlign: 'center', // Center align the text
+              }}
+            >
+              <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+                Welcome to Talent for Startups
+              </Typography>
+              <Typography variant="h5" color="inherit" paragraph>
+                This is a one-stop destination for startups to acquire essential digital skills and business management knowledge. Whether you're just launching your venture or seeking to scale it up, we have the resources you need to succeed in today's competitive landscape.
+              </Typography>
+              <Link variant="subtitle1" href="#">
+                Kickstart your journey with us!
+              </Link>
+            </Box>
+          </Grid>
+        </Grid>
+      </Paper>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={12}>
+          <CardActionArea component="a" href="#">
+            <Card sx={{ display: 'flex' }}>
+              <CardContent sx={{ flex: 1 }}>
+                <Typography component="h2" variant="h5" gutterBottom>
+                  Courses for Every Stage
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  Our platform offers a diverse range of courses tailored to suit startups at various stages of their journey. From foundational courses covering digital marketing, website development, and social media management to advanced modules on financial planning, leadership, and growth hacking, we have something for everyone.
+                </Typography>
+                <Typography variant="body1" color="primary">
+                  Continue reading...
+                </Typography>
+              </CardContent>
+              <CardMedia
+                component="img"
+                sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+                image={workspace} // Use the workspace image
+                alt="other people"
+              />
+            </Card>
+          </CardActionArea>
+        </Grid>
+        <Grid item xs={12} md={12}>
+          <CardActionArea component="a" href="#">
+            <Card sx={{ display: 'flex' }}>
+              <CardContent sx={{ flex: 1 }}>
+                <Typography component="h2" variant="h5" gutterBottom>
+                  Learn from Industry Experts
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  Learn from industry experts and seasoned entrepreneurs who have successfully navigated the challenges of building and growing startups. Our instructors bring real-world experience and practical insights to the table, ensuring that you receive high-quality education that is directly applicable to your business.
+                </Typography>
+                <Typography variant="body1" color="primary">
+                  Continue reading...
+                </Typography>
+              </CardContent>
+              <CardMedia
+                component="img"
+                sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+                image={workspace} // Use the workspace image
+                alt="another people"
+              />
+            </Card>
+          </CardActionArea>
+        </Grid>
+      </Grid>
+    </Box>
+  );
 }
 
 export default Home;

@@ -8,22 +8,21 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 		"Helvetica Neue", sans-serif;
 	font-size: 1rem;
-	background-color: #b89e98;
+	background-color: #ffffff;
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
 }
 
 .container {
-	background-color: #e2a9a9;
+	background-color: #ffffff;
 	border-radius: 5px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 	width: 350px;
 }
 
 form {
-	max-width: 400px;
+	max-width: 800px;
 	margin: 10px auto;
 	padding: 0.5rem 1rem;
 }
@@ -43,7 +42,7 @@ form h1 {
 }
 
 .field small {
-	color: #dc3545;
+	color: #ffffff;
 }
 
 label {
@@ -112,12 +111,12 @@ textarea.success:focus {
 
 /* button */
 button {
-	background: #0e57c4;
+	background: #504d4d;
 	color: #fff;
 	border-radius: 0.25rem;
 	font-size: 1rem;
 	font-weight: 400;
-	border: 1px solid #0d6efd;
+	border: 1px solid #ffffff;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
 		box-shadow 0.15s ease-in-out;
 	text-align: center;
@@ -178,7 +177,7 @@ input[type="radio"] {
 	display: grid;
 	grid-template-columns: 20% 1fr;
 	gap: 1rem 1rem;
-	align-items: center;
+	align-items: right;
 	margin-bottom: 1rem;
 }
 .horizontal .field label {
@@ -211,5 +210,5 @@ input[type="radio"] {
 }
 
 .error {
-	color: #35bbdc;
+	color: #6735dc;
 }
